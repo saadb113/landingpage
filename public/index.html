@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="" class="logo" alt="">
+        <nav>
+            <a class="paragraph" href="#home">Home</a>
+            <a class="paragraph" href="#why-choose-us">Why Choose Us</a>
+            <a class="paragraph" href="#testimonials">Testimonials</a>
+            <a class="paragraph" href="/tracking.html">Tracking</a>
+            <a class="paragraph" onclick="ToggleCart()"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <div class="left">
+            <div></div>
+            <img src="./img/mainImg.png" alt="">
+        </div>
+        <div class="right">
+            <h2>Normal to oily skin</h2>
+            <h1>Poreless Liquid
+                Foundation</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+            <div class="buttons">
+                <button  onclick="AddtoCart(1)"><img src="./img/cat.svg" alt="">Add to cart</button>
+                <button><img src="./img/play.svg" alt=""> How it works</button>
+            </div>
+            <div class="ratings">
+                <div>
+                    <img src="./img/star.svg" alt="">
+                    <h3>4,6</h3>
+                    <p>Rating</p>
+                </div>
+                <div>
+                    <img src="./img/lock.png" alt="">
+                    <h3>200+</h3>
+                    <p>Product solds</p>
+                </div>
+                <div>
+                    <img src="./img/reviews.png" alt="">
+                    <h3>99+</h3>
+                    <p>Review</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-us" id="why-choose-us">
+        <h2>Why choose us <img src="./img/line.png" alt=""></h2>
+        <p class="paragraph">SLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="row">
+            <div class="card">
+                <div class="icon"><img src="./img/star2.png" alt=""></div>
+                <h3>Dermatologist Tested</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./img/tested.png" alt=""></div>
+                <h3>Allergy tested</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./img/check.png" alt=""></div>
+                <h3>Non-comedogenic</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+        </div>
+    </section>
+    <section class="ratingSection">
+        <div class="left">
+            <div class="ratings">
+                <div>
+                    <img src="./img/star.svg" alt="">
+                    <h3>4,6</h3>
+                    <p class="paragraph">Rating</p>
+                </div>
+                <div>
+                    <img src="./img/lock.png" alt="">
+                    <h3>200+</h3>
+                    <p class="paragraph">Product solds</p>
+                </div>
+                <div>
+                    <img src="./img/reviews.png" alt="">
+                    <h3>99+</h3>
+                    <p class="paragraph">Review</p>
+                </div>
+            </div>
+            <h3>This concealer smoothes over shadowy areas of the skin and blends out effortlessly, highlighting for a brighter complexion.</h3>
+        </div>
+        <div class="right">
+            <div></div>
+            <img src="./img/ratingSec.png" alt="">
+        </div>
+    </section>
+    <div class="productSection hero">
+        <div class="left">
+            <div></div>
+            <img src="./img/product1.png" alt="">
+        </div>
+        <div class="right">
+            <h2>All skins types</h2>
+            <h1>Poreless Liquid
+                Foundation</h1>
+                <div class="accordians">
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> How to use</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Ingredients</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Benefits</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button onclick="AddtoCart(2)"><img src="./img/cat.svg" alt="">Add to cart</button>
+                    <button>$ 5.60</button>
+                </div>
+        </div>
+    </div>
+    <div class="productSection productSection2 hero">
+        
+        <div class="right">
+            <h2>Only skins types</h2>
+            <h1>Double lasting serum
+                foundation (25 gr)</h1>
+                <div class="accordians">
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> How to use</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Ingredients</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Benefits</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button  onclick="AddtoCart(3)"><img src="./img/cat.svg" alt="">Add to cart</button>
+                    <button>$ 3.90</button>
+                </div>
+        </div>
+        <div class="left">
+            <div></div>
+            <img src="./img/product2.png" alt="">
+        </div>
+    </div>
+    <div class="multipleProducts">
+        <h2>Our popular foundation <img src="./img/line.png" alt=""></h2>
+        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="products">
+            <div class="product">
+                <div class="img">
+                    <div></div>
+                    <img src="./img/product11.png" alt="">
+                </div>
+                <h3>All stay foundation</h3>
+                <p class="paragraph">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry   
+                </p>
+                <button  onclick="AddtoCart(4)">Add to Cart</button>
+
+            </div>
+            <div class="product">
+                <div class="img">
+                    <div></div>
+                    <img src="./img/product12.png" alt="">
+                </div>
+                <h3>Foundation wide cover</h3>
+                <p class="paragraph">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry   
+                </p>
+                <button  onclick="AddtoCart(5)">Add to Cart</button>
+
+            </div>
+            <div class="product">
+                <div class="img">
+                    <div></div>
+                    <img src="./img/product13.png" alt="">
+                </div>
+                <h3>Dark circle foundation </h3>
+                <p class="paragraph">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry   
+                </p>
+                <button  onclick="AddtoCart(6)">Add to Cart</button>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="testimonials" id="testimonials">
+        <h2>Testimonials 
+            <img src="./img/line4.png" alt="">
+        </h2>
+        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="rating">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                <h2>Jane Cooper</h2>
+                <h3>Beauty vloger</h3>
+            </div>
+            <div class="testimonial">
+                <div class="rating">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                <h2>Leslie Alexander</h2>
+                <h3>Beauty vloger</h3>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="left">
+            <h2>Subscribe to the 
+                daily updates <img src="./img/line4.png" alt=""></h2>
+        </div>
+<form action="" class="right">
+    <input type="text" placeholder="Enter your email address">
+    <button>Subscribe now</button>
+</form>
+    </div>
+        <div class="cartPopup">
+        <div class="bg" onclick="ToggleCart()"></div>
+        <div class="container">
+            <h1>Cart <span class="close-cart"  onclick="ToggleCart()">X</span></h1>
+            <div class="cart-items"></div>
+            <div class="checkoutbutton">
+                <h2>Total: <span>200$</span></h2>
+                <button onclick="window.location.href='./checkout.html'">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h2>Cosmetics</h2>
+        <div class="links">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Product</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="icons">
+            <a href=""><img src="./img/insta.png" alt=""></a>
+            <a href=""><img src="./img/tg.png" alt=""></a>
+            <a href=""><img src="./img/fb.png" alt=""></a>
+        </div>
+        <p>© 2022 Convertio WordPress theme by UiCore. All Rights Reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+<script>
+    showCartItems()
+</script>
+</body>
+</html>
