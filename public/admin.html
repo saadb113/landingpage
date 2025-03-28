@@ -33,11 +33,8 @@
         <img src="" class="logo" alt="">
         <nav>
             <a class="paragraph" href="/index.html">Home</a>
-            <a class="paragraph" href="/index.html#why-choose-us">Why Choose Us</a>
-            <a class="paragraph" href="/index.html#testimonials">Testimonials</a>
-            <a class="paragraph" href="/tracking.html">Tracking</a>
-            <a class="paragraph" onclick="ToggleCart()"><i class="fa-solid fa-cart-shopping"></i></a>
-        </nav>
+            <a class="paragraph" href="/admin.html" onclick="localStorage.removeItem('adminLogin')">Logout</a>
+         </nav>
     </header>
     <section class="why-choose-us orders" style="display: none;" id="why-choose-us">
         <h2>All Orders<img src="./img/line.png" alt=""></h2>
@@ -53,7 +50,7 @@
         </div>
 <form action="" class="right">
     <input type="password" name="password" placeholder="Enter your email address">
-    <button onclick="authenticateAdmin(event)">Subscribe now</button>
+    <button onclick="authenticateAdmin(event)">Login</button>
 </form>
     </div>
 
