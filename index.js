@@ -3,12 +3,12 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const fs = require("fs");
-const DATA_FILE = path.join(__dirname, "../data.json");
+const DATA_FILE = path.join(__dirname, "data.json");
 app.use(express.json());
 const adminPassword = process.env.PASSWORD
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/all-orders", (req, res) => {
     let productsData = []
