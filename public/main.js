@@ -199,7 +199,7 @@ const placeOrder = (e) => {
 
     if (cartItems.length == 0) return alert("Please Add Items to cart First!")
     if (name == "" || phone == "" || email == "" || city == "" || state == "" || address == "" || zipcode == "") return alert("Please Fill all the required details first")
-    fetch("/api/checkout", {
+    fetch("/checkout", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
