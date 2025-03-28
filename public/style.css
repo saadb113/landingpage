@@ -178,7 +178,6 @@ position: absolute;
     gap: 2rem;
     margin-top: 6rem;
     align-items: center;
-    flex-direction: row-reverse;
 }
 .why-choose-us .row .card{
     width: 38rem;
