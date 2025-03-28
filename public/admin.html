@@ -113,7 +113,7 @@
                 .then(data =>{
                     console.log(data,passwordInput)
                     if(data.data != false){
-                        Orders = data
+                        Orders = data.sort((a, b) => b.trackingid - a.trackingid);
                         if(data.length >= 1){
                             document.querySelector(".noOrders").style.display = "none"
                         }
