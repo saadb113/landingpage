@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">BOMBEAT</h2>
+        <nav>
+            <a class="paragraph" href="#home">Home</a>
+            <a class="paragraph" href="#why-choose-us">Why Choose Us</a>
+            <a class="paragraph" href="#testimonials">Testimonials</a>
+            <a class="paragraph" href="/tracking.html">Tracking</a>
+            <a class="paragraph" onclick="ToggleCart()"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+        <div class="hamburger" onclick="this.parentElement.classList.toggle('active')">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <section class="hero" id="home">
+        <div class="left">
+            <div></div>
+            <img src="./img/mainImg.png" alt="">
+        </div>
+        <div class="right">
+            <h2>Normal to oily skin</h2>
+            <h1>Poreless Liquid
+                Foundation</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+            <div class="buttons">
+                <button  onclick="AddtoCart(1)"><img src="./img/cat.svg" alt="">Add to cart</button>
+                <button><img src="./img/play.svg" alt=""> How it works</button>
+            </div>
+            <div class="ratings">
+                <div>
+                    <img src="./img/star.svg" alt="">
+                    <h3>4,6</h3>
+                    <p>Rating</p>
+                </div>
+                <div>
+                    <img src="./img/lock.png" alt="">
+                    <h3>200+</h3>
+                    <p>Product solds</p>
+                </div>
+                <div>
+                    <img src="./img/reviews.png" alt="">
+                    <h3>99+</h3>
+                    <p>Review</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-us" id="why-choose-us">
+        <h2>Why choose us <img src="./img/line.png" alt=""></h2>
+        <p class="paragraph">SLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="row">
+            <div class="card">
+                <div class="icon"><img src="./img/star2.png" alt=""></div>
+                <h3>Dermatologist Tested</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./img/tested.png" alt=""></div>
+                <h3>Allergy tested</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./img/check.png" alt=""></div>
+                <h3>Non-comedogenic</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+        </div>
+    </section>
+    <section class="ratingSection">
+        <div class="left">
+            <div class="ratings">
+                <div>
+                    <img src="./img/star.svg" alt="">
+                    <h3>4,6</h3>
+                    <p class="paragraph">Rating</p>
+                </div>
+                <div>
+                    <img src="./img/lock.png" alt="">
+                    <h3>200+</h3>
+                    <p class="paragraph">Product solds</p>
+                </div>
+                <div>
+                    <img src="./img/reviews.png" alt="">
+                    <h3>99+</h3>
+                    <p class="paragraph">Review</p>
+                </div>
+            </div>
+            <h3>This concealer smoothes over shadowy areas of the skin and blends out effortlessly, highlighting for a brighter complexion.</h3>
+        </div>
+        <div class="right">
+            <div></div>
+            <img src="./img/ratingSec.png" alt="">
+        </div>
+    </section>
+    <div class="productSection hero">
+        <div class="left">
+            <div></div>
+            <img src="./img/product1.png" alt="">
+        </div>
+        <div class="right">
+            <h2>All skins types</h2>
+            <h1>Poreless Liquid
+                Foundation</h1>
+                <div class="accordians">
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> How to use</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Ingredients</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Benefits</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button><img src="./img/cat.svg" alt="">Add to cart</button>
+                    <button>$ 5.60</button>
+                </div>
+        </div>
+    </div>
+    <div class="productSection productSection2 hero">
+        
+        <div class="right">
+            <h2>Only skins types</h2>
+            <h1>Double lasting serum
+                foundation (25 gr)</h1>
+                <div class="accordians">
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> How to use</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Ingredients</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordianButton"><img src="./img/accordian.png" alt=""> Benefits</div>
+                        <div class="accordianBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iusto amet dignissimos doloribus, nostrum odit.</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button><img src="./img/cat.svg" alt="">Add to cart</button>
+                    <button>$ 3.90</button>
+                </div>
+        </div>
+        <div class="left">
+            <div></div>
+            <img src="./img/product2.png" alt="">
+        </div>
+    </div>
+    <div class="multipleProducts">
+        <h2>Our popular foundation <img src="./img/line.png" alt=""></h2>
+        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="products">
+        </div>
+    </div>
+    <div class="testimonials" id="testimonials">
+        <h2>Testimonials 
+            <img src="./img/line4.png" alt="">
+        </h2>
+        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="rating">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                <h2>Jane Cooper</h2>
+                <h3>Beauty vloger</h3>
+            </div>
+            <div class="testimonial">
+                <div class="rating">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                    <img src="./img/rating.png" alt="">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                <h2>Leslie Alexander</h2>
+                <h3>Beauty vloger</h3>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="left">
+            <h2>Subscribe to the 
+                daily updates <img src="./img/line4.png" alt=""></h2>
+        </div>
+<form action="" class="right">
+    <input type="text" placeholder="Enter your email address">
+    <button>Subscribe now</button>
+</form>
+    </div>
+        <div class="cartPopup">
+        <div class="bg" onclick="ToggleCart()"></div>
+        <div class="container">
+            <h1>Cart <span class="close-cart"  onclick="ToggleCart()">X</span></h1>
+            <div class="cart-items"></div>
+            <div class="checkoutbutton">
+                <h2>Total: <span>200$</span></h2>
+                <button onclick="window.location.href='./checkout.html'">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h2>Cosmetics</h2>
+        <div class="links">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Product</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="icons">
+            <a href=""><img src="./img/insta.png" alt=""></a>
+            <a href=""><img src="./img/tg.png" alt=""></a>
+            <a href=""><img src="./img/fb.png" alt=""></a>
+        </div>
+        <p>© 2022 Convertio WordPress theme by UiCore. All Rights Reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+<script>
+    showCartItems()
+
+
+    const displayProducts = async(id1,id2,id3)=>{
+        const response = await fetch("/all-products");
+
+    const result = await response.json();
+    console.log(result)
+    const template = document.createElement("template")
+    const multipleProducts = document.querySelector(".multipleProducts .products")
+    let displayProducts = []
+    result.forEach(element => {
+        if(element.productId == id1 || element.productId == id2 || element.productId == id3)
+        displayProducts.push(element)
+    });
+    result.forEach(element => {
+        template.innerHTML = `
+         <div class="product">
+                <div class="img">
+                    <div></div>
+                    <img src="${element.img}" alt="">
+                </div>
+                <h3>${element.title}</h3>
+                <p class="paragraph">
+                    ${element.description.substring(1,70) }...   
+                </p>
+                <button  onclick="AddtoCart(${element.productId})">Add to Cart</button>
+
+            </div>
+        `
+        multipleProducts.appendChild(template.content.firstElementChild)
+    });
+}
+    displayProducts(1,2,3)
+
+    const singleProductData = async function({productId="",parent="",title="",price="",desc="",subtitle="",img="",addToCart=""}){
+        console.log(price)
+        const titleEl = document.querySelector(`${parent} ${title}`)
+        const priceEl = document.querySelector(`${parent} ${price}`)
+        const addToCartEl = document.querySelector(`${parent} ${addToCart}`)
+        const subtitleEl = document.querySelector(`${parent} ${subtitle}`)
+        const descEl = document.querySelector(`${parent} ${desc}`)
+        const imgEl = document.querySelector(`${parent} ${img}`)
+
+        const response = await fetch("/product-by-id", {
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json"
+                },
+                    body: JSON.stringify({ productId })
+                });
+
+        const result = await response.json();
+        titleEl ? titleEl.innerHTML = result.title : ""
+        descEl ? descEl.innerHTML = `${result.description.substring(1,100) }...`: ""
+        priceEl ? priceEl.innerHTML = `$ ${result.price}` : ""
+        subtitleEl ? subtitleEl.innerHTML = result.subtitle : ""
+        imgEl ? imgEl.src = result.img : ""
+        addToCartEl ? addToCartEl.setAttribute("onclick",`AddtoCart(${result.productId})`) : ""
+    }
+    singleProductData({productId:6,parent:".productSection2",price:".right button:nth-child(2)",title:".right h1",desc:null,subtitle:".right h2",img:".left img", addToCart:".right .buttons button:nth-child(1)"})
+    singleProductData({productId:5,parent:".productSection:not(.productSection2)",price:".right button:nth-child(2)",title:".right h1",desc:null,subtitle:".right h2",img:".left img", addToCart:".right .buttons button:nth-child(1)"})
+    singleProductData({productId:4,parent:".hero",price:null,title:".right h1",desc:".right p",subtitle:".right h2",img:".left img", addToCart:".right .buttons button:nth-child(1)"})
+</script>
+</body>
+</html>
