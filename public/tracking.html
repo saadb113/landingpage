@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">\<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">BOMBEAT</h2>
+
+        <nav>
+            <a class="paragraph" href="/index.html">Home</a>
+            <a class="paragraph" href="/index.html#why-choose-us">Why Choose Us</a>
+            <a class="paragraph" href="/index.html#testimonials">Testimonials</a>
+            <a class="paragraph" href="/tracking.html">Tracking</a>
+            <a class="paragraph" onclick="ToggleCart()"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+        <div class="hamburger" onclick="this.parentElement.classList.toggle('active')">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <div class="subscribe">
+        <div class="left">
+            <h2>Check Your Order Status <img src="./img/line4.png" alt=""></h2>
+        </div>
+        <form method="get" class="right">
+            <input type="text" name="trackingid" id="trackingid" placeholder="Enter your tracking ID">
+            <button onclick="trackOrder(event)">Check Order Status</button>
+        </form>
+    </div>
+    <section style="margin-bottom: 12rem;" class="why-choose-us" id="why-choose-us">
+        <h2>Why choose us <img src="./img/line.png" alt=""></h2>
+        <p class="paragraph">SLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's</p>
+        <div class="row">
+            <div class="card">
+                <div class="icon"><img src="./img/star2.png" alt=""></div>
+                <h3>Dermatologist Tested</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./img/tested.png" alt=""></div>
+                <h3>Allergy tested</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./img/check.png" alt=""></div>
+                <h3>Non-comedogenic</h3>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been</p>
+            </div>
+        </div>
+    </section>
+    <div class="cartPopup">
+        <div class="bg" onclick="ToggleCart()"></div>
+        <div class="container">
+            <h1>Cart <span class="close-cart" onclick="ToggleCart()">X</span></h1>
+            <div class="cart-items"></div>
+            <div class="checkoutbutton">
+                <h2>Total: <span>200$</span></h2>
+                <button onclick="window.location.href='./checkout.html'">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <div class="successfullOrder">
+        <div class="bg" onclick="document.querySelector('.successfullOrder').classList.remove('active')"></div>
+        <div class="container">
+            <h1 class="heading">Order Details <span onclick="document.querySelector('.successfullOrder').classList.remove('active')">X</span></h1>
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, fugit? Autem voluptatum
+                quia accusantium odio excepturi id sequi a!</p>
+            <p class="paragraph tracking">Tracking ID: <span class="trackingid">2-3 Business Days </span></p>
+            <p class="paragraph tracking">Order Status: <span class="orderStatus">2-3 Business Days </span></p>
+            <p class="paragraph tracking">Total: <span class="total">$20 </span></p>
+            <button onclick="window.location.href='/index.html'">Go Back</button>
+        </div>
+    </div>
+    <footer>
+        <h2>Cosmetics</h2>
+        <div class="links">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Product</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="icons">
+            <a href=""><img src="./img/insta.png" alt=""></a>
+            <a href=""><img src="./img/tg.png" alt=""></a>
+            <a href=""><img src="./img/fb.png" alt=""></a>
+        </div>
+        <p>© 2022 Convertio WordPress theme by UiCore. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="main.js"></script>
+
+    <script>
+        const trackOrder = (e) => {
+            e.preventDefault()
+            const successfullOrder = document.querySelector(".successfullOrder")
+            const trackingIdDetails = document.querySelector(".trackingid")
+            const orderStatus = document.querySelector(".orderStatus")
+            const total = document.querySelector(".total")
+            const trackingid = document.querySelector("#trackingid")
+            fetch("/tracking", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ trackingid: trackingid.value })
+            })
+                .then(response => response.json())
+                .then(data =>{
+                    console.log(data)
+                   if(data.data != false){
+
+                       successfullOrder.classList.add("active")
+                       trackingIdDetails.innerHTML = data.trackingid
+                       orderStatus.innerHTML = data.orderStatus
+                       total.innerHTML = `$${data.total}`
+                    }else{
+                        alert("Please Enter Valid tracking ID!")
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+           
+        }
+       showCartItems()
+    </script>
+</body>
+
+</html>

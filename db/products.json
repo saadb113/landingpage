@@ -1,0 +1,56 @@
+[
+  {
+    "title": "All stay foundation",
+    "subtitle": "All stay foundations",
+    "price": 20,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "productId": 1,
+    "category": "cosmetics",
+    "img": "./uploads/product11.png"
+  },
+  {
+    "title": "Foundation wide cover",
+    "subtitle": "Foundation wide cover",
+    "price": 25,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "productId": 2,
+    "category": "cosmetics",
+    "img": "./uploads/product12.png"
+  },
+  {
+    "title": "Dark circle foundation",
+    "subtitle": "Dark circle foundation",
+    "price": 30,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "productId": 3,
+    "category": "cosmetics",
+    "img": "./uploads/product13.png"
+  },
+  {
+    "title": "Poreless Liquid Foundation",
+    "subtitle": "Normal to oily skin",
+    "price": 30,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "productId": 4,
+    "category": "other",
+    "img": "./uploads/mainImg.png"
+  },
+  {
+    "title": "Poreless Liquid Foundation",
+    "subtitle": "All skins types",
+    "price": 5.6,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "productId": 5,
+    "category": "other",
+    "img": "./uploads/product1.png"
+  },
+  {
+    "title": "Double lasting serum foundation (25 gr)",
+    "subtitle": "",
+    "price": 3.9,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "productId": 6,
+    "category": "other",
+    "img": "./uploads/product2.png"
+  }
+]

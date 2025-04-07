@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .filters{
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: normal;
+            gap: 5px;
+            margin-top: 40px;
+            justify-content: space-between;
+        }
+        .filters .view{
+            display: flex;
+            gap: 10px;
+        }
+        .filters .view button{
+            background: transparent;
+            cursor: pointer;
+            border: 0;
+        }
+        .filters .view button img{
+            width: 25px;
+            height: 25px;
+            opacity: .5;
+        }
+        .filters .view button.active img{
+            opacity: 1;
+        }
+        .filters select{
+            border: 1px solid #A0A79A;
+            font-size: 16px;
+
+            padding: 16px;
+            background: transparent;
+        }
+        .noOrders{
+            font-size: 2.5rem;
+            text-align: center;
+            margin: auto;
+        }
+        .why-choose-us{
+            margin-bottom: 4rem;
+        }
+        .why-choose-us > p{
+            margin: auto;
+            text-align: center;
+        }
+        .subscribe{
+            margin-top: 0;
+            min-height: 80vh;
+        }
+        .why-choose-us .row{
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">BOMBEAT</h2>
+
+        <nav>
+            <a class="paragraph" href="/admin">Admin</a>
+            <a class="paragraph" href="/admin/addProduct.html">Add Products</a>
+            <a class="paragraph" href="/admin/products.html">Products</a>
+            <a class="paragraph" href="/admin">Orders</a>
+            <a class="paragraph" href="./index.html" onclick="localStorage.removeItem('adminLogin')">Logout</a>
+         </nav>
+         <div class="hamburger" onclick="this.parentElement.classList.toggle('active')">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <section class="why-choose-us orders" style="display: none;" id="why-choose-us">
+      
+        <h2>All Orders<img src="../img/line.png" alt=""></h2>
+        <p class="paragraph">SLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+        <div class="filters">
+            <div class="view">
+                <button onclick="changeCardView(this,'list')"><img src="../img/list.svg" alt=""></button>
+                <button class="active" onclick="changeCardView(this,'card')"><img src="../img/grid.svg" alt=""></button>
+            </div>
+            <div class="search">
+                <p>Search</p>
+                <input type="text" onkeyup="searchItem(event)">
+            </div>
+            <div class="filter">
+
+                <p>Sort By:</p>
+                <select name="" id="" onchange="filter(event)">
+                    <option value="date">Latest</option>
+                    <option value="qty">Qty</option>
+                    <option value="pricelth">Total (low to high)</option>
+                    <option value="pricehtl">Total (high to low)</option>
+                </select>
+            </div>
+        </div>
+        <div class="ordersContainer">
+            <div class="tableHead">
+                <p>Order Id</p>
+                <p>Name</p>
+                <p>Email</p>
+                <p>Order Status</p>
+                <p>Action</p>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+        <p class="noOrders">No Orders</p>
+    </section>
+   
+    <div class="subscribe">
+        <div class="left">
+            <h2>Enter Admin Password <img src="../img/line4.png" alt=""></h2>
+        </div>
+<form action="" class="right">
+    <input type="password" name="password" placeholder="Enter your email address">
+    <button onclick="authenticateAdmin(event)">Login</button>
+</form>
+    </div>
+
+    <footer>
+        <h2>Cosmetics</h2>
+        <div class="links">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Product</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="icons">
+            <a href=""><img src="../img/insta.png" alt=""></a>
+            <a href=""><img src="../img/tg.png" alt=""></a>
+            <a href=""><img src="../img/fb.png" alt=""></a>
+        </div>
+        <p>© 2022 Convertio WordPress theme by UiCore. All Rights Reserved.</p>
+    </footer>
+    <div class="successfullOrder orderDetails">
+        <div class="bg"  onclick="document.querySelector('.successfullOrder').classList.remove('active')"></div>
+        <div class="container">
+            <h1>Order Details <span onclick="document.querySelector('.successfullOrder').classList.remove('active')">X</span></h1>
+            
+            <p class="paragraph tracking Cname">Customer Name: <span>$20 </span></p>
+            <p class="paragraph tracking trackingid">Tracking ID: <span>13123214939</span></p>
+            <p class="paragraph tracking email">Email: <span>2-3 Business Days </span></p>
+            <p class="paragraph tracking phone">Phone: <span>2-3 Business Days </span></p>
+            <p class="paragraph tracking city">City: <span>2-3 Business Days </span></p>
+            <p class="paragraph tracking state">State: <span>2-3 Business Days </span></p>
+            <p class="paragraph tracking zipcode">Zipcode: <span>2-3 Business Days </span></p>
+            <p class="paragraph tracking address">Address: <span>2-3 Business Days </span></p>
+            <p class="paragraph tracking total">Total: <span>2-3 Business Days </span></p>
+            <h1>Products Ordered</h1>
+            <div class="productsList">
+                
+            </div>
+            <button onclick="document.querySelector('.successfullOrder').classList.remove('active')">Go Back</button>
+        </div>
+    </div>
+    <script src="../main.js"></script>
+    <script>
+        let Orders = []
+        const passwordInput = document.querySelector("input[name='password']")
+        const authenticateAdmin = (e) => {   
+            if(e){
+                e.preventDefault()
+            }
+           
+            fetch("/all-orders", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ password: passwordInput.value, adminAuthentication : localStorage.getItem("adminLogin") })
+            })
+                .then(response => response.json())
+                .then(data =>{
+                    if(data.data != false){
+                        Orders = data.sort((a, b) => b.trackingid - a.trackingid);
+                        if(data.length >= 1){
+                            document.querySelector(".noOrders").style.display = "none"
+                        }
+                        localStorage.setItem("adminLogin",true)
+                        showOrders()
+                        document.querySelector(".why-choose-us").style.display = "block"
+                        document.querySelector(".subscribe").style.display = "none"
+
+                    }else{
+                        alert("Incorrect Password")
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+           
+        }
+        const showOrders = ()=>{
+            const ordersContainer = document.querySelector(".orders .row")          
+            ordersContainer.innerHTML = ""
+            const template = document.createElement("template")
+            Orders.map(element=>{
+                        template.innerHTML = `
+                        <div class="card">
+                <h2><span>Order# </span>${element.trackingid}</h2>
+                <h3>${element.name}</h3>
+                <p class="paragraph">${element.email || null}</p>
+                <p class="paragraph phone">${element.phone|| null}</p>
+                <p class="paragraph address">${element.address|| null}</p>
+                <p class="paragraph orderStatus">Set Order Status:</p>
+                <select name="" id="" class="order-${element.orderStatus}" onchange="setOrderStatus(event,'${element.trackingid}')">
+                    <option value="Processing" ${element.orderStatus == "Processing" ? "selected" : ""}>Processing</option>
+                    <option value="Sent To Delivery" ${element.orderStatus == "Sent To Delivery" ? "selected" : ""}>Sent To Delivery</option>
+                    <option value="Completed" ${element.orderStatus == "Completed" ? "selected" : ""}>Completed</option>
+                </select> <br>
+                <div class="buttons">
+                    <button class="vieworder" onclick="viewOrder(${element.trackingid})">View Order</button>
+                    <button class="deleteorder" onclick="deleteOrder(${element.trackingid})">Delete Order</button>
+                </div>
+            </div>
+                        `
+                        ordersContainer.appendChild(template.content.firstElementChild)
+                    })
+        }
+
+        if(localStorage.getItem("adminLogin")){
+            document.querySelector(".subscribe").style.display = "none"
+            document.querySelector(".why-choose-us").style.display = "block"
+            authenticateAdmin(null)
+            showOrders()
+            
+        }else{
+            document.querySelector(".subscribe").style.display = "flex"
+            document.querySelector(".why-choose-us").style.display = "none"
+        }
+        const viewOrder = (orderId)=>{
+            const orderDetails = document.querySelector(".successfullOrder")
+            const productsList = document.querySelector(".successfullOrder .productsList")
+            const trackingid = document.querySelector(".trackingid span")
+            const Cname = document.querySelector(".Cname span")
+            const email = document.querySelector(".email span")
+            const phone = document.querySelector(".phone span")
+            const city = document.querySelector(".city span")
+            const state = document.querySelector(".state span")
+            const zipcode = document.querySelector(".zipcode span")
+            const address = document.querySelector(".address span")
+            const total = document.querySelector(".total span")
+            const Order = Orders.filter(x=>x.trackingid == orderId)[0]
+            orderDetails.classList.add("active")
+            Cname.innerHTML = Order.name
+            trackingid.innerHTML = Order.trackingid
+            email.innerHTML = Order.email
+            phone.innerHTML = Order.phone
+            city.innerHTML = Order.city
+            state.innerHTML = Order.state
+            zipcode.innerHTML = Order.zipcode
+            address.innerHTML = Order.address
+            total.innerHTML = Order.total
+            const template = document.createElement("template")
+            productsList.innerHTML = ""
+            Order.cartItems.map(element=>{
+                template.innerHTML = `
+                <div class="productItem">
+                    <img src="../${element.img}" alt="" class="thumbnail">
+                    <div class="details">
+                        <h3 class="name">${element.title}</h3>
+                        <p class="paragraph productid">Prouct ID: <span>${element.productId}</span></p>
+                        <p class="paragraph quantity">Quantity: <span>x${element.quantity}</span></p>
+                        <p class="paragraph price">Price: <span>$${element.price}</span></p>
+                    </div>
+                </div>
+                `
+                productsList.appendChild(template.content.firstElementChild)
+            })
+        }
+    
+    const deleteOrder = (orderId)=>{
+        const confirmDeleteOrder = confirm("Are you sure you want to delete this order?")
+        if(!confirmDeleteOrder) return
+        fetch("/delete-order", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ trackingid: orderId })
+            })
+                .then(response => response.json())
+                .then(data =>{
+                    alert("Order deleted! Please reload the page.")
+                })
+                .catch(error => console.error("Error:", error));
+           
+    }
+    const setOrderStatus = (event,orderId)=>{
+        fetch("/update-order-status", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ trackingid: orderId , status : event.target.value})
+            })
+                .then(response => response.json())
+                .then(data =>{
+                   alert("Order status updated successfully!")
+                })
+                .catch(error => console.error("Error:", error));
+           
+    }
+    
+    const filter = (e)=>{
+        const value = e.target.value
+        console.log(Orders)
+        if(value == "pricelth"){
+            Orders = Orders.sort((a, b) => a.total - b.total);            
+        }else if(value == "pricehtl"){
+            Orders = Orders.sort((a, b) => b.total - a.total);
+        }else if (value == "qty"){
+            Orders.sort((a, b) => {
+                const totalQtyA = a.cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                const totalQtyB = b.cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                return totalQtyB - totalQtyA; // Descending: highest quantity first
+            });
+        }else {
+            Orders = Orders.sort((a, b) => b.trackingid - a.trackingid);
+        }
+        showOrders()
+    }
+    const changeCardView = (el, type)=>{
+        if(type == "list"){
+            document.querySelector('.why-choose-us .row').classList.add("table")
+        }else{
+            document.querySelector('.why-choose-us .row').classList.remove("table")
+        }
+        document.querySelectorAll('.why-choose-us .filters .view button').forEach(element => {
+            element.classList.remove("active")
+        });
+        console.log(el)
+        el.classList.add("active")
+    }
+    const searchItem = (e)=>{
+        const value = e.target.value.toLowerCase();
+        const filterOrders = Orders.filter(x=>x.title.toLowerCase().includes(value))
+        const ordersContainer = document.querySelector(".orders .row")          
+            ordersContainer.innerHTML = ""
+            const template = document.createElement("template")
+            filterOrders.map(element=>{
+                        template.innerHTML = `
+                        <div class="card">
+                <h2><span>Order# </span>${element.trackingid}</h2>
+                <h3>${element.name}</h3>
+                <p class="paragraph">${element.email || null}</p>
+                <p class="paragraph phone">${element.phone|| null}</p>
+                <p class="paragraph address">${element.address|| null}</p>
+                <p class="paragraph orderStatus">Set Order Status:</p>
+                <select name="" id="" class="order-${element.orderStatus}" onchange="setOrderStatus(event,'${element.trackingid}')">
+                    <option value="Processing" ${element.orderStatus == "Processing" ? "selected" : ""}>Processing</option>
+                    <option value="Sent To Delivery" ${element.orderStatus == "Sent To Delivery" ? "selected" : ""}>Sent To Delivery</option>
+                    <option value="Completed" ${element.orderStatus == "Completed" ? "selected" : ""}>Completed</option>
+                </select> <br>
+                <div class="buttons">
+                    <button class="vieworder" onclick="viewOrder(${element.trackingid})">View Order</button>
+                    <button class="deleteorder" onclick="deleteOrder(${element.trackingid})">Delete Order</button>
+                </div>
+            </div>
+                        `
+                        ordersContainer.appendChild(template.content.firstElementChild) })
+    }
+ 
+    </script>
+</body>
+</html>
